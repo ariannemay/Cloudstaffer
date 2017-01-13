@@ -73,7 +73,7 @@ class MailController extends Controller
                 'password' => $randomPassword,
             ],
                 function ($m) use ($request) {
-                    $m->from('employee.directory.team@gmail.com', 'Employee Directory Team');
+                    $m->from('ariannesalunga12@gmail.com', 'Employee Directory Team');
                     $m->to($request->input('admin-email'))->subject('Admin invitation letter');
                 });
 

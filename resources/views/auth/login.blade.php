@@ -1,18 +1,21 @@
-@extends('layouts.app')
+@extends('layouts.wonav')
 
 @section('content')
-<div class="container animated fadeInLeft">
+<div class="wrapper_home">
+<div class="mod_container animated fadeInUp">
     <div class="row">
         <div class="col s12 m8 offset-m2">
-            <div class="card">
+            <div class="card card_mod">
                 <div class="card-content">
-                    <h5 class="card-title"><strong>Login</strong></h5>
+                    <h5 class="card-title card-title-mod">
+                        <img src="{{URL::asset('logo_white.png')}}" style="width: 320px">
+                        <!-- Sign in your account --></h5>
                     <div>
                         <form method="post" action="{{ url('/login') }}">
                             <div class="row">
                                 {!! csrf_field() !!}
                                 <div class="input-field col s12">
-                                    <input type="email" class="validate{{ $errors->first('email') ? ' animated shake' : '' }}" data-error="{{ $errors->first('email') }}" name="email">
+                                    <input id="email_mod" type="email" class="validate{{ $errors->first('email') ? ' animated shake' : '' }}" data-error="{{ $errors->first('email') }}" name="email">
                                     <label for="email">Email</label>
                                     @if ($errors->has('email'))
                                         <span class="help-block">
@@ -21,7 +24,7 @@
                                     @endif
                                 </div>
                                 <div class="input-field col s12">
-                                    <input type="password" class="validate{{ $errors->first('password') ? ' animated shake' : '' }}" name="password">
+                                    <input id="password_mod" type="password" class="validate{{ $errors->first('password') ? ' animated shake' : '' }}" name="password">
                                     <label for="password">Password</label>
                                     @if ($errors->has('password'))
                                         <span class="help-block">
@@ -30,11 +33,11 @@
                                     @endif
                                 </div>
                                 <div class="input-field col s12">
-                                    <input type="checkbox" name="remember" id="remember" class="filled-in">
-                                    <label for="remember">Remember me</label>
+                                    <button class="btn btn-mod waves-effect waves-light" type="submit" name="submit">Login</button>
                                 </div>
                                 <div class="input-field col s12">
-                                    <button class="btn waves-effect waves-light" type="submit" name="submit">Login</button>
+                                    <input type="checkbox" name="remember" id="remember" class="filled-in">
+                                    <label for="remember">Remember me</label>
                                 </div>
                             </div>
                         </form>
@@ -43,6 +46,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection
 @section('script')

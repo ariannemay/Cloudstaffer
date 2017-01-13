@@ -1,26 +1,26 @@
-@extends('layouts.app')
+@extends('layouts.wonav')
 
 @section('content')
-<div class="container animated fadeInUp">
+<div class="wrapper_home">
+<div class="mod_container animated fadeInUp">
     <div class="row">
         <div class="col s12">
-            <div class="card">
+            <div class="card card_mod">
                 <div class="card-content">
-                    <h5 class="card-title">Welcome</h5>
+                    <h5 class="card-title">Welcome to Cloudstaff</h5>
                     <p>
-                        Hi there. You're using Employee Directory application.
-                        </br>
-                        Enjoy!
-                        <br>
-                        Check out our <a href="https://github.com/trieudh58/employee_dir">repo on Github</a>, or visit demo <a href="http://www.velocityteam.xyz">here</a>
+                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                       <br>
+                       Aenean commodo ligula eget dolor. Aenean massa.
                     </p>
                 </div>
                 <div class="card-action">
-                    <a href="{{ url('/department') }}">Departments</a>
-                    <a href="{{ url('/employee') }}">Employees</a>
+                    <a href="{{ url('/login') }}">Login</a>
+                    <!-- <a href="{{ url('/employee') }}">Employees</a> -->
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection

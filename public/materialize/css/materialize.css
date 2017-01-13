@@ -3444,6 +3444,10 @@ input[type=range] + .thumb {
   .container {
     width: 70%;
   }
+
+  .mod_container {
+    width: 100%;
+  }
 }
 
 .container .row {
@@ -4539,7 +4543,7 @@ small {
   margin: 0.5rem 0 1rem 0;
   background-color: #fff;
   transition: box-shadow .25s;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .card .card-title {
@@ -5602,7 +5606,7 @@ input[type=number]:focus:not([readonly]),
 input[type=search]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
   border-bottom: 1px solid #26a69a;
-  box-shadow: 0 1px 0 0 #26a69a;
+  box-shadow: 0 1px 0 0 #fff;
 }
 
 input:not([type]):focus:not([readonly]) + label,
